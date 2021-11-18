@@ -17,7 +17,7 @@
             <BottomNav />
           </div>
           <div class="col-md-9">
-            <MainPage />
+            <DetailNowPlaying />
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@ import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 import Sidebar from '@/components/Sidebar.vue'
 import BottomNav from '@/components/BottomNav.vue'
-import MainPage from '@/components/MainPage.vue'
+import DetailNowPlaying from '@/components/DetailNowPlaying/index.vue'
 export default {
   name: 'Home',
   components: {
@@ -47,7 +47,7 @@ export default {
     Footer,
     Sidebar,
     BottomNav,
-    MainPage
+    DetailNowPlaying
   }
 }
 </script>
