@@ -262,6 +262,16 @@ h1 a {
     opacity: 1;
   }
 }
+
+@media screen and (min-width: 2560px) {
+  nav input {
+    margin: 0 0 0 500px;
+  }
+  nav .links {
+    width: 50%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   nav .links a {
     font-size: 16px;

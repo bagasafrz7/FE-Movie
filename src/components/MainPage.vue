@@ -1,6 +1,6 @@
 <template>
   <div class="main-page">
-    <div class="container">
+    <div class="container-fluid">
       <b-skeleton-wrapper :loading="loading">
         <template #loading>
           <div class="isloading">
@@ -9,7 +9,7 @@
         </template>
         <div class="row">
           <div
-            class="col-md-4 mb-4"
+            class="col-lg-4 col-md-6 mb-4"
             v-for="(item, index) in getListData"
             :key="index"
           >
@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="card-content mt-2">
-              <p>{{ item.Title }}</p>
+              <p @click="linkTitle(item)">{{ item.Title }}</p>
             </div>
           </div>
         </div>
@@ -142,6 +142,9 @@ export default {
     startLoading() {
       this.loading = true
       this.loadingTime = 0
+    },
+    linkTitle(item) {
+      this.$router.push('/detail-movie/' + item.imdbID)
     }
   },
   components: {

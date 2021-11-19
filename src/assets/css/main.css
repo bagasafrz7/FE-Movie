@@ -76,6 +76,7 @@
 .post-preview-thumbnail:hover {
     filter: none;
     -webkit-filter: grayscale(0);
+    cursor: pointer;
 }
 
 .post-preview-thumbnail:hover .read-more a {
@@ -118,6 +119,12 @@
     line-height: 20px;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.main-content .card-content p:hover {
+    color: #C0222E;
 }
 
 .footer {
