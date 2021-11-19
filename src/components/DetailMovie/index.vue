@@ -52,7 +52,7 @@
               </div>
             </div>
             <div class="card-content mt-2">
-              <p>{{ getListData[0].Title }}</p>
+              <p @click="link0()">{{ getListData[0].Title }}</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -71,7 +71,7 @@
               </div>
             </div>
             <div class="card-content mt-2">
-              <p>{{ getListData[1].Title }}</p>
+              <p @click="link1()">{{ getListData[1].Title }}</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -91,7 +91,7 @@
               </div>
             </div>
             <div class="card-content mt-2">
-              <p>{{ getListData[2].Title }}</p>
+              <p @click="link2()">{{ getListData[2].Title }}</p>
             </div>
           </div>
         </div>
@@ -184,6 +184,15 @@ export default {
     startLoading() {
       this.loading = true
       this.loadingTime = 0
+    },
+    link0() {
+      this.$router.push('/detail-nowplaying/' + this.getListData[0].imdbID)
+    },
+    link1() {
+      this.$router.push('/detail-nowplaying/' + this.getListData[1].imdbID)
+    },
+    link2() {
+      this.$router.push('/detail-nowplaying/' + this.getListData[2].imdbID)
     }
   },
   components: {
